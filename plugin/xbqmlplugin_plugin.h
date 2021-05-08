@@ -1,9 +1,9 @@
-#ifndef SPEECHINDICATOR_PLUGIN_H
-#define SPEECHINDICATOR_PLUGIN_H
+#ifndef XBQMLPLUGIN_PLUGIN_H
+#define XBQMLPLUGIN_PLUGIN_H
 
 #include <QQmlExtensionPlugin>
 
-class SpeechIndicatorPlugin : public QQmlExtensionPlugin
+class XBQmlPluginPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID QQmlExtensionInterface_iid)
@@ -12,4 +12,4 @@ public:
     void registerTypes(const char *uri) override;
 };
 
-#endif // SPEECHINDICATOR_PLUGIN_H
+#endif // XBQMLPLUGIN_PLUGIN_H

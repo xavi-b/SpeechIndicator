@@ -2,19 +2,19 @@ TEMPLATE        = lib
 CONFIG         += plugin c++17
 DEFINES        += QT_DEPRECATED_WARNINGS
 QT             += qml quick
-TARGET          = SpeechIndicator
+TARGET          = xbqmlplugin
 
 TARGET = $$qtLibraryTarget($$TARGET)
-uri = net.xavib.speechindicator
+uri = net.xavib.xbqmlplugin
 
 DESTDIR = $$PWD/$$replace(uri, \., /)
 
 SOURCES += \
-        speechindicator_plugin.cpp \
+        xbqmlplugin_plugin.cpp \
         speechindicator.cpp
 
 HEADERS += \
-        speechindicator_plugin.h \
+        xbqmlplugin_plugin.h \
         speechindicator.h
 
 DISTFILES = qmldir

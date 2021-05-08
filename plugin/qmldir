@@ -1,2 +1,2 @@
-module net.xavib.speechindicator
-plugin SpeechIndicator
+module net.xavib.xbqmlplugin
+plugin xbqmlplugin

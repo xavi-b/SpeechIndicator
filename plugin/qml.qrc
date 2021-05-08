@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>qml/SpeechWaveIndicator.qml</file>
+        <file>qml/StateSelector.qml</file>
     </qresource>
 </RCC>
