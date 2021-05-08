@@ -4,13 +4,20 @@ import QtGraphicalEffects 1.15
 
 Rectangle {
     property var displayStates: [];
-    property int sliderMargin: 2;
     property int currentState: 0;
+
+    property var textColor: "black"
+    property font textFont;
+
+    property int sliderMargin: 2;
     property int sliderSpeed: 500;
+    property var sliderColor: "white"
+    property alias sliderHeight: slider.height
+    property alias sliderGlow: sliderGlow
 
     height: 50
-    radius: height/2
     color: "lightgray"
+    radius: height/2
 
     property int nbDisplayStates: displayStates.length > 0 ? displayStates.length : 1
 
@@ -23,7 +30,7 @@ Rectangle {
     }
 
     RectangularGlow {
-        id: effect
+        id: sliderGlow
         anchors.fill: slider
         glowRadius: sliderMargin / 2
         spread: 0.5
@@ -38,7 +45,7 @@ Rectangle {
         anchors.margins: sliderMargin
         width: parent.width / nbDisplayStates - 2 * sliderMargin
         radius: height/2
-        color: "white"
+        color: sliderColor
         border.width: sliderMargin
         border.color: currentColor();
 
@@ -70,6 +77,8 @@ Rectangle {
                 text: indexName(index)
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
+                color: textColor
+                font: textFont
 
                 MouseArea {
                     cursorShape: Qt.PointingHandCursor

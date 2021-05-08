@@ -57,6 +57,13 @@ Rectangle {
             Layout.fillWidth: true
             Layout.margins: 4
 
+            textColor: "green"
+            textFont.family: "Arial"
+            textFont.bold: true
+            textFont.italic: true
+            sliderSpeed: 1000;
+            sliderColor: "salmon"
+
             displayStates: [
                 {
                     name: "aaa",
