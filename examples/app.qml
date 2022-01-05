@@ -12,8 +12,8 @@ Rectangle {
         running: true
         interval: 100
         onTriggered: {
-            speechIndicator.power = Math.random() * 100;
-            speechWaveIndicator.power = Math.random() * 100;
+            speechIndicator.power = Math.random() * 100
+            speechWaveIndicator.power = Math.random() * 100
         }
     }
 
@@ -45,11 +45,11 @@ Rectangle {
                 Layout.preferredWidth: parent.width * 2 / 3
                 Layout.fillHeight: true
 
-    //            Behavior on power {
-    //                PropertyAnimation {
-    //                    easing.type: Easing.InOutQuad
-    //                }
-    //            }
+                //            Behavior on power {
+                //                PropertyAnimation {
+                //                    easing.type: Easing.InOutQuad
+                //                }
+                //            }
             }
         }
 
@@ -61,23 +61,26 @@ Rectangle {
             textFont.family: "Arial"
             textFont.bold: true
             textFont.italic: true
-            sliderSpeed: 1000;
+            sliderSpeed: 1000
             sliderColor: "salmon"
 
-            displayStates: [
-                {
-                    name: "aaa",
-                    color: "red"
-                },
-                {
-                    name: "bbb",
-                    color: "transparent"
-                },
-                {
-                    name: "ccc",
-                    color: "yellow"
-                }
-            ]
+            displayStates: [{
+                    "name": "aaa",
+                    "color": "red"
+                }, {
+                    "name": "bbb",
+                    "color": "transparent"
+                }, {
+                    "name": "ccc",
+                    "color": "yellow"
+                }]
+        }
+
+        TagsField {
+            Layout.fillWidth: true
+            Layout.preferredHeight: 40
+
+            model: ["test", "top"]
         }
     }
 }

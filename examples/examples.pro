@@ -7,3 +7,7 @@ SOURCES += \
 
 RESOURCES += \
     examples.qrc
+
+debug {
+CONFIG += console
+}

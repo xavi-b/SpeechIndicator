@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>qml/SpeechWaveIndicator.qml</file>
         <file>qml/StateSelector.qml</file>
+        <file>qml/TagsField.qml</file>
     </qresource>
 </RCC>
