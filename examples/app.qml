@@ -3,8 +3,8 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
 Rectangle {
-    width: 300
-    height: 200
+    width: 640
+    height: 400
     color: "white"
 
     Timer {
@@ -80,7 +80,14 @@ Rectangle {
             Layout.fillWidth: true
             Layout.preferredHeight: 40
 
-            model: ["test", "top"]
+            model: ["test", "top", "top", "top", "top", "top", "top"]
+        }
+
+        TagsArea {
+            Layout.fillWidth: true
+            Layout.preferredHeight: 100
+
+            model: ["test", "top", "top", "top", "top", "top", "top"]
         }
     }
 }

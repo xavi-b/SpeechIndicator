@@ -36,7 +36,6 @@ TextField {
         contentWidth: contentItem.childrenRect.width
         width: contentWidth > root.width
                - minimumTextWidth ? root.width - minimumTextWidth : contentWidth
-        implicitWidth: width
         clip: true
         height: parent.height - 10
         spacing: 5

@@ -3,5 +3,6 @@
         <file>qml/SpeechWaveIndicator.qml</file>
         <file>qml/StateSelector.qml</file>
         <file>qml/TagsField.qml</file>
+        <file>qml/TagsArea.qml</file>
     </qresource>
 </RCC>
