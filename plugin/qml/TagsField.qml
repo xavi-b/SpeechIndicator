@@ -1,6 +1,6 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
 TextField {
     id: root
@@ -34,8 +34,7 @@ TextField {
 
         id: listview
         contentWidth: contentItem.childrenRect.width
-        width: contentWidth > root.width
-               - minimumTextWidth ? root.width - minimumTextWidth : contentWidth
+        width: contentWidth > (root.width - minimumTextWidth) ? (root.width - minimumTextWidth) : contentWidth
         clip: true
         height: parent.height - 10
         spacing: 5

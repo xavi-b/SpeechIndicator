@@ -4,5 +4,6 @@
         <file>qml/StateSelector.qml</file>
         <file>qml/TagsField.qml</file>
         <file>qml/TagsArea.qml</file>
+        <file>qml/Refresher.qml</file>
     </qresource>
 </RCC>

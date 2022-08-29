@@ -12,4 +12,5 @@ void XBQmlPluginPlugin::registerTypes(const char* uri)
     qmlRegisterType(QUrl("qrc:/qml/StateSelector.qml"), uri, 1, 0, "StateSelector");
     qmlRegisterType(QUrl("qrc:/qml/TagsField.qml"), uri, 1, 0, "TagsField");
     qmlRegisterType(QUrl("qrc:/qml/TagsArea.qml"), uri, 1, 0, "TagsArea");
+    qmlRegisterSingletonType(QUrl("qrc:/qml/Refresher.qml"), uri, 1, 0, "Refresher");
 }

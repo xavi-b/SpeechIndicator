@@ -1,11 +1,15 @@
 import net.xavib.xbqmlplugin 1.0
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
+import QtQuick.Window
 
-Rectangle {
+Window {
     width: 640
     height: 400
-    color: "white"
+    visible: true
+
+    signal buttonClicked
 
     Timer {
         repeat: true
@@ -88,6 +92,22 @@ Rectangle {
             Layout.preferredHeight: 100
 
             model: ["test", "top", "top", "top", "top", "top", "top"]
+        }
+
+        Row {
+            Image {
+                source: {
+                    Refresher.registerBinding()
+                    Qt.resolvedUrl(qsTr("asset:/image.png"))
+                }
+            }
+            Button {
+                text: "Click"
+                onClicked: {
+                    buttonClicked()
+                    Refresher.refreshAll()
+                }
+            }
         }
     }
 }

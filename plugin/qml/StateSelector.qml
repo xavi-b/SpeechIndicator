@@ -1,41 +1,30 @@
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtGraphicalEffects 1.15
+import QtQuick
+import QtQuick.Layouts
 
 Rectangle {
-    property var displayStates: [];
-    property int currentState: 0;
+    property var displayStates: []
+    property int currentState: 0
 
-    property var textColor: "black"
-    property font textFont;
+    property color textColor: "black"
+    property font textFont
 
-    property int sliderMargin: 2;
-    property int sliderSpeed: 500;
-    property var sliderColor: "white"
+    property int sliderMargin: 2
+    property int sliderSpeed: 500
+    property color sliderColor: "white"
     property alias sliderHeight: slider.height
-    property alias sliderGlow: sliderGlow
 
     height: 50
     color: "lightgray"
-    radius: height/2
+    radius: height / 2
 
     property int nbDisplayStates: displayStates.length > 0 ? displayStates.length : 1
 
     function currentColor() {
-        return displayStates[currentState].color ? displayStates[currentState].color : "transparent";
+        return displayStates[currentState].color ? displayStates[currentState].color : "transparent"
     }
 
     function indexName(index) {
-        return displayStates[index].name ? displayStates[index].name : displayStates[index];
-    }
-
-    RectangularGlow {
-        id: sliderGlow
-        anchors.fill: slider
-        glowRadius: sliderMargin / 2
-        spread: 0.5
-        color: "gray"
-        cornerRadius: slider.radius + glowRadius
+        return displayStates[index].name ? displayStates[index].name : displayStates[index]
     }
 
     Rectangle {
@@ -44,10 +33,10 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.margins: sliderMargin
         width: parent.width / nbDisplayStates - 2 * sliderMargin
-        radius: height/2
+        radius: height / 2
         color: sliderColor
         border.width: sliderMargin
-        border.color: currentColor();
+        border.color: currentColor()
 
         x: sliderMargin + parent.width * currentState / nbDisplayStates
 
@@ -84,7 +73,7 @@ Rectangle {
                     cursorShape: Qt.PointingHandCursor
                     anchors.fill: parent
                     onClicked: {
-                        currentState = index;
+                        currentState = index
                     }
                 }
             }
