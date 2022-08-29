@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
 
-set(PROJECT_NAME xbmlplugin VERSION 1.0)
+set(PROJECT_NAME xbqmlplugin VERSION 1.0)
 
 project(${PROJECT_NAME})
 
@@ -28,5 +28,5 @@ if(CMAKE_VERSION VERSION_LESS "3.7.0")
 endif()
 
 # subdirectories
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/plugin)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME})
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/examples)

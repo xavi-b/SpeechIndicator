@@ -1,4 +1,4 @@
-import net.xavib.xbqmlplugin 1.0
+import xbqmlplugin
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls

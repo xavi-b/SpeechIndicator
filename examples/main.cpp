@@ -3,7 +3,7 @@
 
 #include "AssetUrlHandler.h"
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     QGuiApplication app(argc, argv);
 
@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
+    engine.addImportPath(app.applicationDirPath() + "/../");
     engine.addUrlInterceptor(&urlHandlerObject._handler);
 
     const QUrl url(QStringLiteral("qrc:/app.qml"));

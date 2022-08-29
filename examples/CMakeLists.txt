@@ -1,4 +1,4 @@
-set(MODULE_NAME xbmlpluginexample)
+set(MODULE_NAME xbqmlpluginexample)
 
 message("Compiling \"${MODULE_NAME}\"")
 
