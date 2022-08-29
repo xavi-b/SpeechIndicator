@@ -78,3 +78,5 @@ Thumbs.db
 *.dll
 *.exe
 
+*.txt.user
+build
